@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - jupyter-packaging
   run:
     - python >=3.6
-    - jupyterlab >=3.0.0rc13,==3.*
+    - jupyterlab >=3,<4
 
 test:
   requires:
