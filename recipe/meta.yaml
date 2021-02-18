@@ -1,5 +1,5 @@
 {% set name = "jupyterlab_execute_time" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0b84571dff332f1cb46dcc74c8ce0e8ed01e810f113be1441427c1d1bed5134
+  sha256: 12a2c9d5755d9eb2bc0fd5ac78a6f2346f609840eb4ac37a423a14bec1f16d0b
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -43,8 +43,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Execute Time Plugin for Jupyter Lab'
-  description: 'Display cell timings in Jupyter Lab'
+  summary: Execute Time Plugin for Jupyter Lab
+  description: Display cell timings in Jupyter Lab
 
 extra:
   recipe-maintainers:
