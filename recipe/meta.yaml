@@ -1,5 +1,5 @@
 {% set name = "jupyterlab_execute_time" %}
-{% set version = "2.1.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9005e8ec938680f38ded2d1de99b098d93126e7e38a936f4022d160d6cc10a34
+  sha256: 652126f4fbb897bfcae0c528ab49d928348af1a050a714ebdd45436cc5d7e7e5
 
 build:
   noarch: python
