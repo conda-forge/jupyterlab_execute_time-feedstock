@@ -21,7 +21,7 @@ requirements:
     - jupyter-packaging
   run:
     - python >=3.6
-    - jupyterlab >=3,<4
+    - jupyterlab >=3,<5
 
 test:
   requires:
