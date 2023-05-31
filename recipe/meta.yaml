@@ -34,7 +34,6 @@ test:
     - pip check
     - jupyter lab --version
     - jlpm --version
-    - jlpm versions
     - jupyter labextension list
     - jupyter labextension list 2>&1 | grep -ie "jupyterlab-execute-time.*OK"
 
