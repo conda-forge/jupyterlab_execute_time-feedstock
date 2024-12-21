@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9b13b65c2c139bfabb3f6ff1706c4d33ed5a56203a89d0297608334e15bc9c0b
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - jupyter-packaging
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - jupyterlab >=4,<5
 
 test:
@@ -28,6 +28,7 @@ test:
     - nodejs >=12
     - pip
     - jupyter-packaging
+    - python {{ python_min }}
   imports:
     - jupyterlab
   commands:
